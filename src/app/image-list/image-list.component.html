@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <input class="search-input form-control" #searchquery placeholder="Search for Images">
+    <button class="btn btn-outline-primary search-btn"(click)="searchImages(searchquery.value)">Search</button>
+  </div>
+  <div class="row">
+    <div *ngFor="let image of images">
+      <div class="image-container">
+        <img src="{{ image.webformatURL }}" class="image-show">
+        <p>Tags: {{ image.tag }}</p>
+        <p>User: {{ image.user }}</p>
+        <p>Comments: {{ image.comments }}</p>
+        <p>Likes: {{ images.like }}</p>
+      </div>
+    </div>
+  </div>
+</div>
